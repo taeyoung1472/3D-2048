@@ -31,9 +31,9 @@ public class CubeCollision : MonoBehaviour
                     {
                         CubeSpawner.instance.PlusCubeMaxNumber();
                     }
+                    GameManager.Instance.shakeManager.ShakeCamera(0.1f);
                     Debug.Log( " Log : " +(Mathf.Log(cube.cubeNumber) / Mathf.Log(2)));
                     Debug.Log( "cube : " +CubeSpawner.instance.cubeMaxNumber);
-
                 }
                 GameManager.Instance.AddScroe(cube.cubeNumber);
                 Collider[] surroundedCubes = Physics.OverlapSphere(transform.position, 2f);
