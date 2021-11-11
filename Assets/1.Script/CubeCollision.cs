@@ -27,7 +27,7 @@ public class CubeCollision : MonoBehaviour
                     Vector3 randomDir = Vector3.one * randomValue;
                     newCube.cubeRigidbody.AddTorque(randomDir);
                     newCube.audio.Play();
-                    if ((Mathf.Log(cube.cubeNumber) / Mathf.Log(2)) >= CubeSpawner.instance.cubeMaxNumber)
+                    if ((Mathf.Log(cube.cubeNumber) / Mathf.Log(2)) >= CubeSpawner.instance.cubeMaxNumber + 1)
                     {
                         CubeSpawner.instance.PlusCubeMaxNumber();
                     }
