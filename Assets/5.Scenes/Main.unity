@@ -140,7 +140,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!114 &49929161
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -292,6 +292,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f5f993b30d5731a4aac3dd7423ce8286, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  shakeManager: {fileID: 0}
   congachuRationObject: {fileID: 0}
   isOver: 0
   score: 0
