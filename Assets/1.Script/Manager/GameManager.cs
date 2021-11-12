@@ -9,19 +9,26 @@ public class GameManager : MonoBehaviour
     public Shaking shakeManager;
     public GameObject congachuRationObject;
     public bool isOver;
+    private bool isExit;
     public static GameManager Instance;
     public int score;
     public int bestScore;
     public Text BestScoreText;
     public Text ScoreText;
     public GameObject overPannel;
+    private int money;
+    public int UserMoney{
+        get {
+            return money;
+        }
+    }
     private void Awake()
     {
         Instance = this;
     }
     private void Start()
     {
-        if(BestScoreText)
+        if (BestScoreText)
         {
             bestScore = PlayerPrefs.GetInt("Best");
             tempBest = bestScore;
@@ -31,7 +38,9 @@ public class GameManager : MonoBehaviour
     private void Update()
     {
         if (Input.GetKeyDown(KeyCode.Escape))
-            ExitGame();
+        {
+            StartCoroutine(ExitGame());
+        }
     }
     public void GoGame()
     {
@@ -41,9 +50,17 @@ public class GameManager : MonoBehaviour
     {
         SceneManager.LoadScene(0);
     }
-    public void ExitGame()
+    public IEnumerator ExitGame()
     {
-        Application.Quit();
+        if (isExit)
+        {
+            Application.Quit();
+        }
+        else{
+            isExit = true;
+        }
+        yield return new WaitForSeconds(0.5f);
+        isExit = false;
     }
     public void GameOver()
     {
@@ -62,7 +79,7 @@ public class GameManager : MonoBehaviour
     {
         score += _score;
         ScoreText.text = string.Format("SCORE : {0}", score);
-        if(bestScore < score)
+        if (bestScore < score)
         {
             SaveBestScore();
             bestScore = score;
@@ -71,6 +88,6 @@ public class GameManager : MonoBehaviour
     }
     public void SaveBestScore()
     {
-        PlayerPrefs.SetInt("Best",score);
+        PlayerPrefs.SetInt("Best", score);
     }
 }
