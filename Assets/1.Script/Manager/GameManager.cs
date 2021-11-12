@@ -5,8 +5,8 @@ using UnityEngine.UI;
 using UnityEngine.SceneManagement;
 public class GameManager : MonoBehaviour
 {
-    int tempBest;
-    public Shaking shakeManager;
+    int tempBest; 
+    public ShakeManager shakeManager;
     public GameObject congachuRationObject;
     public bool isOver;
     private bool isExit;
@@ -49,7 +49,7 @@ public class GameManager : MonoBehaviour
     public void GoMain()
     {
         SceneManager.LoadScene(0);
-    }
+    } 
     public IEnumerator ExitGame()
     {
         if (isExit)
