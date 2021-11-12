@@ -35,7 +35,7 @@ public class CubeCollision : MonoBehaviour
                     Debug.Log( " Log : " +(Mathf.Log(cube.cubeNumber) / Mathf.Log(2)));
                     Debug.Log( "cube : " +CubeSpawner.instance.cubeMaxNumber);
                 }
-                GameManager.Instance.AddScroe(cube.cubeNumber);
+                GameManager.Instance.AddScroe(cube.cubeNumber * 2);
                 Collider[] surroundedCubes = Physics.OverlapSphere(transform.position, 2f);
                 float explosionForce = 500f;
                 float explosionRadius = 1.3f;
