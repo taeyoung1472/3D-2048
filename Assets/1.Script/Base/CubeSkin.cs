@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 
 [System.Serializable]
-public class Skin
+public class CubeSkin
 {
     public string name;
     public int skinNumber;
