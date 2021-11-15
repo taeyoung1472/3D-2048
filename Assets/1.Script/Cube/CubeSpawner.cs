@@ -1,7 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-
+using TMPro;
 public class CubeSpawner : MonoBehaviour
 {
     public static CubeSpawner instance;
@@ -12,7 +12,8 @@ public class CubeSpawner : MonoBehaviour
     [HideInInspector] public int maxCubeNumber;//4096
     [SerializeField] private GameObject cubePrefabs;
     [SerializeField] private Color[] cubeColors;
-
+    [SerializeField] private TMP_Text nextNumberText;
+    [SerializeField] private int[] cubeNumberTemp;
     private int maxPower = 12;
     private Vector3 defaultSpawnPos;
 
@@ -45,21 +46,27 @@ public class CubeSpawner : MonoBehaviour
         {
             AddCubeToQueue();
         }
+        if(number == 0)
+        {
+            cubeNumberTemp[0] = cubeNumberTemp[1];
+            number = cubeNumberTemp[0];
+            GenerateRandomNumber();
+            nextNumberText.text = string.Format("NEXT : {0}", cubeNumberTemp[1].ToString());
+        }
         Cube cube = cubesQueue.Dequeue();
         cube.transform.position = position;
         cube.SetNumber(number);
         cube.SetColor(GetColor(number));
         cube.gameObject.SetActive(true);
-
         return cube;
     }
     public Cube SpawnRandom()
     {
-        return Spawn(GenerateRandomNumber(), defaultSpawnPos);
+        return Spawn(0, defaultSpawnPos);
     }
-    public int GenerateRandomNumber()
+    public void GenerateRandomNumber()
     {
-        return (int)Mathf.Pow(2, Random.Range(1, cubeMaxNumber));
+        cubeNumberTemp[1] = (int)Mathf.Pow(2, Random.Range(1, cubeMaxNumber));
     }
     public void PlusCubeMaxNumber()
     {

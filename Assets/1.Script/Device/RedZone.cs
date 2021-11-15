@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class RedZone : MonoBehaviour
 {
+    bool isTrigger = false;
     private void OnTriggerStay(Collider other)
     {
         Cube cube = other.GetComponent<Cube>();
@@ -11,9 +12,10 @@ public class RedZone : MonoBehaviour
         {
             if (!cube.isMainCube && cube.cubeRigidbody.velocity.magnitude < .1f)
             {
-                if(GameManager.Instance.isOver == false)
+                if(GameManager.Instance.isOver == false && !isTrigger)
                 {
-                    GameManager.Instance.GameOver();
+                    isTrigger = true;
+                    GameManager.Instance.googleSheetManager.Call("Get",GameManager.Instance.score);
                 }
             }
         }

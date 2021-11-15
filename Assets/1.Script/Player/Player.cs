@@ -12,6 +12,7 @@ public class Player : MonoBehaviour
 
     private Vector3 cubePos;
     bool isPointerDown;
+    bool isCube = true;
 
     void Start()
     {
@@ -37,16 +38,18 @@ public class Player : MonoBehaviour
     private void SpawnNewCube()
     {
         mainCube.isMainCube = false;
+        isCube = true;
         SpawnCube();
     }
     private void OnPointerUp()
     {
-        if (isPointerDown)
+        if (isPointerDown && isCube)
         {
             isPointerDown = false;
             audio.Play();
             mainCube.cubeRigidbody.AddForce(Vector3.forward * 20f, ForceMode.Impulse);
             GameManager.Instance.AddScroe(mainCube.cubeNumber);
+            isCube = false;
             Invoke("SpawnNewCube", 0.3f);
         }
     }

@@ -5,9 +5,12 @@ using UnityEngine.UI;
 using UnityEngine.SceneManagement;
 public class GameManager : MonoBehaviour
 {
-    int tempBest; 
+    int tempBest;
+    public string overString;
+    public bool isCube;
     public ShakeManager shakeManager;
     public GameObject congachuRationObject;
+    public GoogleSheetManager googleSheetManager;
     public bool isOver;
     private bool isExit;
     public static GameManager Instance;
@@ -16,6 +19,7 @@ public class GameManager : MonoBehaviour
     public Text BestScoreText;
     public Text ScoreText;
     public GameObject overPannel;
+    public Text text;
     private int money;
     public int UserMoney{
         get {
@@ -64,12 +68,20 @@ public class GameManager : MonoBehaviour
     }
     public void GameOver()
     {
-        overPannel.SetActive(true);
-        if (tempBest < bestScore)
+        if (!isOver)
         {
-            CongachuRation();
+            googleSheetManager.Call("Get", score);
+            text.gameObject.SetActive(true);
+            text.text = string.Format("»óÀ§ : {0}%", overString);
+            overPannel.SetActive(true);
+            if (tempBest < bestScore)
+            {
+                text.gameObject.SetActive(false);
+                googleSheetManager.Call("Set", score);
+                CongachuRation();
+            }
+            isOver = true;
         }
-        isOver = true;
     }
     public void CongachuRation()
     {
