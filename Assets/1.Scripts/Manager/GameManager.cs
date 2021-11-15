@@ -20,10 +20,10 @@ public class GameManager : MonoBehaviour
     public Text ScoreText;
     public GameObject overPannel;
     public Text text;
-    private int money;
-    public int UserMoney{
-        get {
-            return money;
+    private User user;
+    public User UserInfo{
+        get{
+            return user;
         }
     }
     private void Awake()
@@ -72,7 +72,7 @@ public class GameManager : MonoBehaviour
         {
             googleSheetManager.Call("Get", score);
             text.gameObject.SetActive(true);
-            text.text = string.Format("»óÀ§ : {0}%", overString);
+            text.text = string.Format("ï¿½ï¿½ï¿½ï¿½ : {0}%", overString);
             overPannel.SetActive(true);
             if (tempBest < bestScore)
             {

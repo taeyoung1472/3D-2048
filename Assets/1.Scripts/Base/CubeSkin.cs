@@ -9,9 +9,11 @@ public class CubeSkin
     public int skinNumber;
     public int price;
     public bool isPurchase;
+    public bool isEquip;
     public bool Locked{
         get{
             return (GameManager.Instance.UserMoney > price) && isPurchase;
         }
     }
+
 }

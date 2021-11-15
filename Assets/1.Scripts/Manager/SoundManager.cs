@@ -14,7 +14,6 @@ public class SoundManager : MonoBehaviour
     }
 
     public void ChangeBGMVolume(float volume){
-        Debug.Log(volume);
         if(volume <= -30f){
             audioMixer.SetFloat("BGM" , -80f);
         }
@@ -23,6 +22,7 @@ public class SoundManager : MonoBehaviour
         }
     }
     public void ChangeMasterVolume(float volume){
+        Debug.Log(volume);
         if(volume <= -30){
             audioMixer.SetFloat("Master", -80f);
         }

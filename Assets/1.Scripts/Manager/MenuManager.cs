@@ -9,8 +9,5 @@ public class MenuManager : MonoBehaviour
     {
         googleSheetManager.Call("Find",0);
     }
-    void Update()
-    {
-        
-    }
+
 }

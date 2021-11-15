@@ -2,6 +2,8 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using TMPro;
+
+[RequireComponent(typeof(Rigidbody2D))]
 public class Cube : MonoBehaviour
 {
     public AudioSource audio;
