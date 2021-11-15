@@ -12,7 +12,7 @@ public class CubeSkin
     public bool isEquip;
     public bool Locked{
         get{
-            return (GameManager.Instance.UserMoney > price) && isPurchase;
+            return (GameManager.Instance.UserInfo.money > price) && isPurchase;
         }
     }
 
