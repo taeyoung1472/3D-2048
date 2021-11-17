@@ -12,9 +12,9 @@ public class GoogleSheetManager : MonoBehaviour
         form.AddField("Name",GameManager.Instance.UserInfo.name);
         form.AddField("Score", score);
         form.AddField("Mode", mode);
+        form.AddField("NewName", GameManager.Instance.UserInfo.nameTemp);
         if (mode == "Change")
         {
-            form.AddField("NewId", GameManager.Instance.UserInfo.nameTemp);
             isOver = false;
             GameManager.Instance.UserInfo.RealChangeName();
         }
