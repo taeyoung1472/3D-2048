@@ -20,7 +20,7 @@ public class GameManager : MonoBehaviour
     public Text ScoreText;
     public GameObject overPannel;
     public Text text;
-    private User user;
+    [SerializeField] private User user;
     public User UserInfo{
         get{
             return user;

@@ -10,6 +10,8 @@ public class NameManager : MonoBehaviour
     [Header("Name")]
     [SerializeField]
     private InputField nameInput;
+    [SerializeField]
+    private InputField changeNameInput;
 
     [SerializeField]
     private int nameLimit;
@@ -21,9 +23,15 @@ public class NameManager : MonoBehaviour
     private bool isShaking;
     private float dotweenDuration = 0.5f;
 
+    [SerializeField] private GameObject nameInputHold;
+
     #region 이벤트
     private void Start()
     {
+        if(GameManager.Instance.UserInfo.name == null)
+        {
+            nameInputHold.SetActive(true);
+        }
         namePlaceholder = nameInput.placeholder.GetComponent<Text>();
         nameInput.characterLimit = nameLimit;
         changeCoroutine = ChangePlaceholder();
@@ -39,6 +47,22 @@ public class NameManager : MonoBehaviour
         if (isShaking) return;
         nickName = nickName.Trim();
         nickName = nickName.Replace("\n", "").Replace("\r", "").Replace("ㅤ", "");
+        if (nickName.Length <= 0)
+        {
+            if (isShaking) return;
+            isShaking = true;
+            StartCoroutine(ShakeText());
+        }
+        GameManager.Instance.UserInfo.ChangeName(nickName);
+    }
+    public void OnClickChange()
+    {
+        nickName = changeNameInput.text;
+        Debug.Log("함수 밖");
+        if (isShaking) return;
+        nickName = nickName.Trim();
+        nickName = nickName.Replace("\n", "").Replace("\r", "").Replace("ㅤ", "");
+        GameManager.Instance.UserInfo.ChangeName(nickName);
         if (nickName.Length <= 0)
         {
             if (isShaking) return;
