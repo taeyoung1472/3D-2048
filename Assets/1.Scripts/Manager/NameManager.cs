@@ -55,21 +55,6 @@ public class NameManager : MonoBehaviour
         }
         GameManager.Instance.UserInfo.ChangeName(nickName);
     }
-    public void OnClickChange()
-    {
-        nickName = changeNameInput.text;
-        Debug.Log("함수 밖");
-        if (isShaking) return;
-        nickName = nickName.Trim();
-        nickName = nickName.Replace("\n", "").Replace("\r", "").Replace("ㅤ", "");
-        GameManager.Instance.UserInfo.ChangeName(nickName);
-        if (nickName.Length <= 0)
-        {
-            if (isShaking) return;
-            isShaking = true;
-            StartCoroutine(ShakeText());
-        }
-    }
     #endregion
 
     private IEnumerator ShakeText()

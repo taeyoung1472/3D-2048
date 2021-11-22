@@ -2510,6 +2510,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 76aa1aca83b1eac4a84ba7a3de412d0a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  audioMixer: {fileID: 0}
   click: {fileID: 1356307431}
 --- !u!4 &1356307433
 Transform:
@@ -2963,12 +2964,22 @@ MonoBehaviour:
   congachuRationObject: {fileID: 1284737540}
   googleSheetManager: {fileID: 2068906965}
   isOver: 0
-  score: 0
+  score: 9999999
   bestScore: 0
   BestScoreText: {fileID: 193996025}
   ScoreText: {fileID: 2067253384}
   overPannel: {fileID: 1669996552}
   text: {fileID: 1896367531}
+  user:
+    nameTemp: 
+    name: "\uC77C\uD0DC\uC601"
+    money: 0
+    bestScore: 0
+    score: 0
+    gotCubeSkin: 
+    gotStageSkin: 
+    skinState: 0
+    stageState: 0
 --- !u!4 &1715320272
 Transform:
   m_ObjectHideFlags: 0
@@ -3498,7 +3509,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 636c51cf5ab06414abbd01a84b7ee448, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  name: "\uD55C\uBBFC\uC601"
 --- !u!4 &2068906966
 Transform:
   m_ObjectHideFlags: 0
