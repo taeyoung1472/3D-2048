@@ -17,6 +17,11 @@ public class CubeSkinPanel : MonoBehaviour
     private Sprite[] cubeSkinSprites;
 
     private CubeSkin cubeSkin;
+    #region 이벤트
+    private void Start() {
+        UpdateUI();
+    }
+    #endregion
     public void SetValue(CubeSkin cubeSkin)
     {
         cubeSkin = this.cubeSkin;
@@ -31,7 +36,11 @@ public class CubeSkinPanel : MonoBehaviour
     public void OnClickPurchase()
     {
         if (cubeSkin.Locked) return;
+        GameManager.Instance.UserInfo.money -= cubeSkin.price;
         purchaseButton.enabled = false;
         cubeSkin.isPurchase = true;
+    }
+    public void OffisEquip(){
+        cubeSkin.isEquip = false;
     }
 }

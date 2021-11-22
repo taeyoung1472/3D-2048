@@ -6,6 +6,11 @@ public enum CubeSkinState
 {
     NONE = 0,
     TAEYOUNG = 1,
+    TAEYOUNG2 = 2,
+    TAEYOUNG3 = 3,
+    TAEYOUNG4 = 4,
+    TAEYOUNG5 = 5,
+
     LENGTH,
 }
 public enum StageSkinState
