@@ -16,8 +16,8 @@ public class GameManager : MonoBehaviour
     public static GameManager Instance;
     public int score;
     public int bestScore;
-    public Text BestScoreText;
-    public Text ScoreText;
+    public TextMesh BestScoreText;
+    public TextMesh ScoreText;
     public GameObject overPannel;
     public Text text;
     [SerializeField] private User user;
@@ -36,7 +36,7 @@ public class GameManager : MonoBehaviour
         {
             bestScore = PlayerPrefs.GetInt("Best");
             tempBest = bestScore;
-            BestScoreText.text = string.Format("BEST SCORE" + System.Environment.NewLine + "{0}", bestScore);
+            BestScoreText.text = string.Format("BestScore : " + "{0}", bestScore);
         }
     }
     private void Update()
@@ -72,7 +72,7 @@ public class GameManager : MonoBehaviour
         {
             googleSheetManager.Call("Get", score);
             text.gameObject.SetActive(true);
-            text.text = string.Format("���� : {0}%", overString);
+            text.text = string.Format("TOP : {0}%", overString);
             overPannel.SetActive(true);
             if (tempBest < bestScore)
             {
@@ -90,12 +90,12 @@ public class GameManager : MonoBehaviour
     public void AddScroe(int _score)
     {
         score += _score;
-        ScoreText.text = string.Format("SCORE : {0}", score);
+        ScoreText.text = string.Format("Score     : {0}", score);
         if (bestScore < score)
         {
             SaveBestScore();
             bestScore = score;
-            BestScoreText.text = string.Format("BEST SCORE" + System.Environment.NewLine + "{0}", bestScore);
+            BestScoreText.text = string.Format("BestScore : " + "{0}", bestScore);
         }
     }
     public void SaveBestScore()

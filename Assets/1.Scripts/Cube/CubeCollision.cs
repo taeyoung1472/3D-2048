@@ -5,6 +5,7 @@ using UnityEngine;
 [RequireComponent(typeof(BoxCollider2D))]
 public class CubeCollision : MonoBehaviour
 {
+    [SerializeField] private GameObject textEffect;
     Cube cube;
     private void Awake()
     {
@@ -34,6 +35,11 @@ public class CubeCollision : MonoBehaviour
                         CubeSpawner.instance.PlusCubeMaxNumber();
                     }
                     GameManager.Instance.shakeManager.ShakeCamera(0.1f);
+                    GameObject obj = Instantiate(textEffect, contactPoint, Quaternion.identity);
+                    TextMesh tm = obj.GetComponent<TextMesh>();
+                    tm.text = (cube.cubeNumber * 2).ToString();
+                    tm.color = newCube.gameObject.GetComponent<MeshRenderer>().material.color;
+                    //print(newCube.gameObject.GetComponent<MeshRenderer>().material.color);
                     //Debug.Log( " Log : " +(Mathf.Log(cube.cubeNumber) / Mathf.Log(2)));
                     //Debug.Log( "cube : " +CubeSpawner.instance.cubeMaxNumber);
                 }

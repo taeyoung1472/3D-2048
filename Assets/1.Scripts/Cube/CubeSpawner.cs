@@ -12,7 +12,7 @@ public class CubeSpawner : MonoBehaviour
     [HideInInspector] public int maxCubeNumber;//4096
     [SerializeField] private GameObject cubePrefabs;
     [SerializeField] private Color[] cubeColors;
-    [SerializeField] private TMP_Text nextNumberText;
+    [SerializeField] private TextMesh nextNumberText;
     [SerializeField] private int[] cubeNumberTemp;
     private int maxPower = 12;
     private Vector3 defaultSpawnPos;
@@ -51,7 +51,7 @@ public class CubeSpawner : MonoBehaviour
             cubeNumberTemp[0] = cubeNumberTemp[1];
             number = cubeNumberTemp[0];
             GenerateRandomNumber();
-            nextNumberText.text = string.Format("NextCube : {0}", cubeNumberTemp[1].ToString());
+            nextNumberText.text = string.Format("NextCube  : {0}", cubeNumberTemp[1].ToString());
         }
         Cube cube = cubesQueue.Dequeue();
         cube.transform.position = position;
@@ -70,6 +70,10 @@ public class CubeSpawner : MonoBehaviour
     }
     public void PlusCubeMaxNumber()
     {
+        if (cubeMaxNumber >= 7)
+        {
+            return;
+        }
         cubeMaxNumber++;
     }
     public Color GetColor(int number)

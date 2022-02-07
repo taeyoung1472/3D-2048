@@ -1366,6 +1366,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: cd7645f2776429f49be6ccdd831ffa80, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  textEffect: {fileID: 8021242347347051449, guid: 3abf3a8aa63afa0429163043b6786e4f, type: 3}
 --- !u!82 &6925220651859605471
 AudioSource:
   m_ObjectHideFlags: 0
