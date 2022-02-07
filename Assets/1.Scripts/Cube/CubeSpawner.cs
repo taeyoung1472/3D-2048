@@ -51,7 +51,7 @@ public class CubeSpawner : MonoBehaviour
             cubeNumberTemp[0] = cubeNumberTemp[1];
             number = cubeNumberTemp[0];
             GenerateRandomNumber();
-            nextNumberText.text = string.Format("NEXT : {0}", cubeNumberTemp[1].ToString());
+            nextNumberText.text = string.Format("NextCube : {0}", cubeNumberTemp[1].ToString());
         }
         Cube cube = cubesQueue.Dequeue();
         cube.transform.position = position;
