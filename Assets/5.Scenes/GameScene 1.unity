@@ -2964,7 +2964,7 @@ MonoBehaviour:
   congachuRationObject: {fileID: 1284737540}
   googleSheetManager: {fileID: 2068906965}
   isOver: 0
-  score: 9999999
+  score: 0
   bestScore: 0
   BestScoreText: {fileID: 193996025}
   ScoreText: {fileID: 2067253384}

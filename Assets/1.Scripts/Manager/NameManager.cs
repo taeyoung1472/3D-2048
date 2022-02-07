@@ -43,7 +43,7 @@ public class NameManager : MonoBehaviour
     public void OnClickStart()
     {
         nickName = nameInput.text;
-        Debug.Log("함수 밖");
+        //Debug.Log("함수 밖");
         if (isShaking) return;
         nickName = nickName.Trim();
         nickName = nickName.Replace("\n", "").Replace("\r", "").Replace("ㅤ", "");
@@ -53,7 +53,7 @@ public class NameManager : MonoBehaviour
             isShaking = true;
             StartCoroutine(ShakeText());
         }
-        GameManager.Instance.UserInfo.ChangeName(nickName);
+        GameManager.Instance.googleSheetManager.Call("Change", 1472,nickName);
     }
     #endregion
 

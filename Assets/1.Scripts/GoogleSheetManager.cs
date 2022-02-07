@@ -6,21 +6,23 @@ public class GoogleSheetManager : MonoBehaviour
 {
     const string URL = "https://script.google.com/macros/s/AKfycbw7sdpzYz47neBCaOoPxul6WrMtpbKmX4o5XJyt6qP1MwuIqSQGGHcalSHeoYRaStE/exec";
     bool isOver = true;
-    public void Call(string mode, int score)
+    public void Call(string mode, int score, string name = null)
     {
         WWWForm form = new WWWForm();
-        form.AddField("Name",GameManager.Instance.UserInfo.name);
-        form.AddField("Score", score);
-        form.AddField("Mode", mode);
-        form.AddField("NewName", GameManager.Instance.UserInfo.nameTemp);
-        if (mode == "Change")
+        if(name != null)
         {
-            isOver = false;
-            GameManager.Instance.UserInfo.RealChangeName();
+            print(mode + score + name + GameManager.Instance.UserInfo.name);
+            form.AddField("Name", name);
         }
         else
         {
-            isOver = true;
+            form.AddField("Name", GameManager.Instance.UserInfo.name);
+        }
+        form.AddField("Score", score);
+        form.AddField("Mode", mode);
+        if (mode == "Change")
+        {
+            isOver = false;
         }
         StartCoroutine(SetRank(form));
     }
