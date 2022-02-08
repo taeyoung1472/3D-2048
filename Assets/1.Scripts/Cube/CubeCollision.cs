@@ -14,6 +14,7 @@ public class CubeCollision : MonoBehaviour
     }
     private void OnCollisionEnter(Collision collision)
     {
+        if(collision.gameObject.GetComponent<Cube>() == null) return;
         Cube otherCube = collision.gameObject.GetComponent<Cube>();
         if (otherCube != null && cube.cubeID > otherCube.cubeID)
         {
