@@ -37,7 +37,7 @@ public class CubeCollision : MonoBehaviour
                     GameManager.Instance.shakeManager.ShakeCamera(0.1f);
                     GameObject obj = Instantiate(textEffect, contactPoint, Quaternion.identity);
                     TextMesh tm = obj.GetComponent<TextMesh>();
-                    tm.text = (cube.cubeNumber * 2).ToString();
+                    tm.text = "+ " + (cube.cubeNumber * 2).ToString();
                     tm.color = newCube.gameObject.GetComponent<MeshRenderer>().material.color;
                     //print(newCube.gameObject.GetComponent<MeshRenderer>().material.color);
                     //Debug.Log( " Log : " +(Mathf.Log(cube.cubeNumber) / Mathf.Log(2)));
