@@ -62,6 +62,7 @@ public class CubeSpawner : MonoBehaviour
     }
     public Cube SpawnRandom()
     {
+        GameManager.Instance.IsCubeSpawn = true;
         return Spawn(0, defaultSpawnPos);
     }
     public void GenerateRandomNumber()

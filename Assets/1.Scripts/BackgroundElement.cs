@@ -19,11 +19,11 @@ public class BackgroundElement : MonoBehaviour
     {
         transform.Rotate(rotVec * Time.deltaTime);
         transform.Translate(movVec * Time.deltaTime);
-        if(transform.position.x > limitXPos.y)
+        if(transform.localPosition.x > limitXPos.y)
         {
             Destroy(gameObject);
         }
-        if (transform.position.x < limitXPos.x)
+        if (transform.localPosition.x < limitXPos.x)
         {
             Destroy(gameObject);
         }

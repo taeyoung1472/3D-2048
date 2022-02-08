@@ -18,23 +18,27 @@ public class TouchSlider : MonoBehaviour , IPointerDownHandler , IPointerUpHandl
     }
     public void OnPointerDown(PointerEventData eventData)
     {
-        if(OnPointerDownEvent != null)
+        if (GameManager.Instance.IsCubeSpawn)
         {
-            OnPointerDownEvent.Invoke();
-        }
-        if(OnPointerDragEvent != null)
-        {
-            OnPointerDragEvent.Invoke(uiSlider.value);
+            if (OnPointerDownEvent != null)
+            {
+                OnPointerDownEvent.Invoke();
+            }
+            if (OnPointerDragEvent != null)
+            {
+                OnPointerDragEvent.Invoke(uiSlider.value);
+            }
+            GameManager.Instance.IsCubeSpawn = false;
         }
     }
     public void OnPointerUp(PointerEventData eventData)
     {
-        if(OnPointerUpEvent != null)
-        {
-            OnPointerUpEvent.Invoke();
-        }
-        uiSlider.value = 0;
-        GameManager.Instance.ComboSystem.ComboReset();
+            if (OnPointerUpEvent != null)
+            {
+                OnPointerUpEvent.Invoke();
+            }
+            uiSlider.value = 0;
+            GameManager.Instance.ComboSystem.ComboReset();
     }
     private void OnSliderValueChange(float value)
     {

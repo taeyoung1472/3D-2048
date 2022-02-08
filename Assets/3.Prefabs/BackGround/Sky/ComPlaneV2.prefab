@@ -1,6 +1,6 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
---- !u!1 &535929737627271889
+--- !u!1 &594305065833707247
 GameObject:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -8,127 +8,46 @@ GameObject:
   m_PrefabAsset: {fileID: 0}
   serializedVersion: 6
   m_Component:
-  - component: {fileID: 2027075094369437350}
-  - component: {fileID: 1554868754154846360}
-  - component: {fileID: 2336279608901841468}
+  - component: {fileID: 3079422438017745427}
+  - component: {fileID: 239235929261796634}
+  - component: {fileID: 1488095345172391857}
   m_Layer: 0
-  m_Name: ComPlaneV3_LeftLandingGear_Tires
+  m_Name: ComPlaneV2_RightLandingGear
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!4 &2027075094369437350
+--- !u!4 &3079422438017745427
 Transform:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 535929737627271889}
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0.00024722517, y: -0.11146535, z: -0.022653617}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children: []
-  m_Father: {fileID: 7153857070416283143}
-  m_RootOrder: 0
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!33 &1554868754154846360
-MeshFilter:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 535929737627271889}
-  m_Mesh: {fileID: 2370554187237199568, guid: 2e292e8b73b6b9f47bcac5e4e2c57eed, type: 3}
---- !u!23 &2336279608901841468
-MeshRenderer:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 535929737627271889}
-  m_Enabled: 1
-  m_CastShadows: 1
-  m_ReceiveShadows: 1
-  m_DynamicOccludee: 1
-  m_MotionVectors: 1
-  m_LightProbeUsage: 1
-  m_ReflectionProbeUsage: 1
-  m_RayTracingMode: 2
-  m_RayTraceProcedural: 0
-  m_RenderingLayerMask: 1
-  m_RendererPriority: 0
-  m_Materials:
-  - {fileID: -876546973899608171, guid: 2e292e8b73b6b9f47bcac5e4e2c57eed, type: 3}
-  m_StaticBatchInfo:
-    firstSubMesh: 0
-    subMeshCount: 0
-  m_StaticBatchRoot: {fileID: 0}
-  m_ProbeAnchor: {fileID: 0}
-  m_LightProbeVolumeOverride: {fileID: 0}
-  m_ScaleInLightmap: 1
-  m_ReceiveGI: 1
-  m_PreserveUVs: 0
-  m_IgnoreNormalsForChartDetection: 0
-  m_ImportantGI: 0
-  m_StitchLightmapSeams: 1
-  m_SelectedEditorRenderState: 3
-  m_MinimumChartSize: 4
-  m_AutoUVMaxDistance: 0.5
-  m_AutoUVMaxAngle: 89
-  m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: 0
-  m_SortingLayer: 0
-  m_SortingOrder: 0
-  m_AdditionalVertexStreams: {fileID: 0}
---- !u!1 &2213786501377105599
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 7167238006298237534}
-  - component: {fileID: 3466203810649794202}
-  - component: {fileID: 1411140874161911415}
-  m_Layer: 0
-  m_Name: ComPlaneV3_RightLandingGear
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &7167238006298237534
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2213786501377105599}
+  m_GameObject: {fileID: 594305065833707247}
   m_LocalRotation: {x: 0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0.1797098, y: 0.17161807, z: -0.113814466}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
-  - {fileID: 2023608085149232739}
-  m_Father: {fileID: 5028444216222399552}
+  - {fileID: 6585543646405038230}
+  m_Father: {fileID: 5836860267780237392}
   m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!33 &3466203810649794202
+--- !u!33 &239235929261796634
 MeshFilter:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2213786501377105599}
-  m_Mesh: {fileID: -3475742165942947686, guid: 2e292e8b73b6b9f47bcac5e4e2c57eed, type: 3}
---- !u!23 &1411140874161911415
+  m_GameObject: {fileID: 594305065833707247}
+  m_Mesh: {fileID: -8609733108239709297, guid: fd91ce56340022c4aa29e8e9c633331d, type: 3}
+--- !u!23 &1488095345172391857
 MeshRenderer:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2213786501377105599}
+  m_GameObject: {fileID: 594305065833707247}
   m_Enabled: 1
   m_CastShadows: 1
   m_ReceiveShadows: 1
@@ -141,7 +60,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: -876546973899608171, guid: 2e292e8b73b6b9f47bcac5e4e2c57eed, type: 3}
+  - {fileID: -876546973899608171, guid: fd91ce56340022c4aa29e8e9c633331d, type: 3}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -163,7 +82,7 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
---- !u!1 &3351548644800512241
+--- !u!1 &1242598789647867386
 GameObject:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -171,45 +90,45 @@ GameObject:
   m_PrefabAsset: {fileID: 0}
   serializedVersion: 6
   m_Component:
-  - component: {fileID: 8633492092200810241}
-  - component: {fileID: 3813672143615235820}
-  - component: {fileID: 7186012784636222565}
+  - component: {fileID: 6585543646405038230}
+  - component: {fileID: 1509841895069765580}
+  - component: {fileID: 6584178662729694264}
   m_Layer: 0
-  m_Name: ComPlaneV3_FrontLandingGear_Tires
+  m_Name: ComPlaneV2_RightLandingGear_Tires
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!4 &8633492092200810241
+--- !u!4 &6585543646405038230
 Transform:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3351548644800512241}
+  m_GameObject: {fileID: 1242598789647867386}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0.0002473219, y: -0.089292526, z: -0.02289939}
+  m_LocalPosition: {x: -0.00024726987, y: -0.111465335, z: -0.022653617}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
-  m_Father: {fileID: 5175812105096081233}
+  m_Father: {fileID: 3079422438017745427}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!33 &3813672143615235820
+--- !u!33 &1509841895069765580
 MeshFilter:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3351548644800512241}
-  m_Mesh: {fileID: 4307693975932169011, guid: 2e292e8b73b6b9f47bcac5e4e2c57eed, type: 3}
---- !u!23 &7186012784636222565
+  m_GameObject: {fileID: 1242598789647867386}
+  m_Mesh: {fileID: 2984158120048672850, guid: fd91ce56340022c4aa29e8e9c633331d, type: 3}
+--- !u!23 &6584178662729694264
 MeshRenderer:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3351548644800512241}
+  m_GameObject: {fileID: 1242598789647867386}
   m_Enabled: 1
   m_CastShadows: 1
   m_ReceiveShadows: 1
@@ -222,7 +141,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: -876546973899608171, guid: 2e292e8b73b6b9f47bcac5e4e2c57eed, type: 3}
+  - {fileID: -876546973899608171, guid: fd91ce56340022c4aa29e8e9c633331d, type: 3}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -244,7 +163,7 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
---- !u!1 &4388953060675172797
+--- !u!1 &1517351462055987454
 GameObject:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -252,46 +171,46 @@ GameObject:
   m_PrefabAsset: {fileID: 0}
   serializedVersion: 6
   m_Component:
-  - component: {fileID: 7153857070416283143}
-  - component: {fileID: 7382616790854995318}
-  - component: {fileID: 6902647280567536442}
+  - component: {fileID: 8132114826812251768}
+  - component: {fileID: 5289934436415623969}
+  - component: {fileID: 2737408706692824539}
   m_Layer: 0
-  m_Name: ComPlaneV3_LeftLandingGear
+  m_Name: ComPlaneV2_LeftLandingGear
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!4 &7153857070416283143
+--- !u!4 &8132114826812251768
 Transform:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4388953060675172797}
+  m_GameObject: {fileID: 1517351462055987454}
   m_LocalRotation: {x: 0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: -0.1797098, y: 0.17161807, z: -0.113814466}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
-  - {fileID: 2027075094369437350}
-  m_Father: {fileID: 5028444216222399552}
+  - {fileID: 2087961694140163173}
+  m_Father: {fileID: 5836860267780237392}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!33 &7382616790854995318
+--- !u!33 &5289934436415623969
 MeshFilter:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4388953060675172797}
-  m_Mesh: {fileID: -8618894056378210461, guid: 2e292e8b73b6b9f47bcac5e4e2c57eed, type: 3}
---- !u!23 &6902647280567536442
+  m_GameObject: {fileID: 1517351462055987454}
+  m_Mesh: {fileID: -209332316161278623, guid: fd91ce56340022c4aa29e8e9c633331d, type: 3}
+--- !u!23 &2737408706692824539
 MeshRenderer:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4388953060675172797}
+  m_GameObject: {fileID: 1517351462055987454}
   m_Enabled: 1
   m_CastShadows: 1
   m_ReceiveShadows: 1
@@ -304,7 +223,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: -876546973899608171, guid: 2e292e8b73b6b9f47bcac5e4e2c57eed, type: 3}
+  - {fileID: -876546973899608171, guid: fd91ce56340022c4aa29e8e9c633331d, type: 3}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -326,7 +245,7 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
---- !u!1 &5657453465937241850
+--- !u!1 &2767047561508361293
 GameObject:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -334,50 +253,131 @@ GameObject:
   m_PrefabAsset: {fileID: 0}
   serializedVersion: 6
   m_Component:
-  - component: {fileID: 5028444216222399552}
-  - component: {fileID: 8243633278217794533}
-  - component: {fileID: 6161966094099826479}
-  - component: {fileID: 5280534550935853078}
-  - component: {fileID: 1198373814692924332}
+  - component: {fileID: 7911902535377416000}
+  - component: {fileID: 698440344090690743}
+  - component: {fileID: 3192775714258199147}
   m_Layer: 0
-  m_Name: Jet
+  m_Name: ComPlaneV2_FrontLandingGear_Tires
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!4 &5028444216222399552
+--- !u!4 &7911902535377416000
 Transform:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5657453465937241850}
-  m_LocalRotation: {x: -0.09229599, y: 0.7010574, z: -0.09229599, w: 0.7010574}
-  m_LocalPosition: {x: -50, y: 100, z: 45.138752}
-  m_LocalScale: {x: 10, y: 10, z: 10}
-  m_Children:
-  - {fileID: 5175812105096081233}
-  - {fileID: 7153857070416283143}
-  - {fileID: 7167238006298237534}
-  m_Father: {fileID: 0}
+  m_GameObject: {fileID: 2767047561508361293}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0.0002473219, y: -0.089292526, z: -0.02289939}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 8791544561057871547}
   m_RootOrder: 0
-  m_LocalEulerAnglesHint: {x: 0, y: 90, z: -15}
---- !u!33 &8243633278217794533
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!33 &698440344090690743
 MeshFilter:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5657453465937241850}
-  m_Mesh: {fileID: 133690397059232672, guid: 2e292e8b73b6b9f47bcac5e4e2c57eed, type: 3}
---- !u!23 &6161966094099826479
+  m_GameObject: {fileID: 2767047561508361293}
+  m_Mesh: {fileID: 6256305146285531391, guid: fd91ce56340022c4aa29e8e9c633331d, type: 3}
+--- !u!23 &3192775714258199147
 MeshRenderer:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5657453465937241850}
+  m_GameObject: {fileID: 2767047561508361293}
+  m_Enabled: 1
+  m_CastShadows: 1
+  m_ReceiveShadows: 1
+  m_DynamicOccludee: 1
+  m_MotionVectors: 1
+  m_LightProbeUsage: 1
+  m_ReflectionProbeUsage: 1
+  m_RayTracingMode: 2
+  m_RayTraceProcedural: 0
+  m_RenderingLayerMask: 1
+  m_RendererPriority: 0
+  m_Materials:
+  - {fileID: -876546973899608171, guid: fd91ce56340022c4aa29e8e9c633331d, type: 3}
+  m_StaticBatchInfo:
+    firstSubMesh: 0
+    subMeshCount: 0
+  m_StaticBatchRoot: {fileID: 0}
+  m_ProbeAnchor: {fileID: 0}
+  m_LightProbeVolumeOverride: {fileID: 0}
+  m_ScaleInLightmap: 1
+  m_ReceiveGI: 1
+  m_PreserveUVs: 0
+  m_IgnoreNormalsForChartDetection: 0
+  m_ImportantGI: 0
+  m_StitchLightmapSeams: 1
+  m_SelectedEditorRenderState: 3
+  m_MinimumChartSize: 4
+  m_AutoUVMaxDistance: 0.5
+  m_AutoUVMaxAngle: 89
+  m_LightmapParameters: {fileID: 0}
+  m_SortingLayerID: 0
+  m_SortingLayer: 0
+  m_SortingOrder: 0
+  m_AdditionalVertexStreams: {fileID: 0}
+--- !u!1 &6506401639259288298
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 5836860267780237392}
+  - component: {fileID: 7399250258912274421}
+  - component: {fileID: 4705027553700483903}
+  - component: {fileID: 7127782898252021719}
+  - component: {fileID: 7304273644269224776}
+  m_Layer: 0
+  m_Name: ComPlaneV2
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &5836860267780237392
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6506401639259288298}
+  m_LocalRotation: {x: -0.09229593, y: -0.7010574, z: 0.09229593, w: 0.7010574}
+  m_LocalPosition: {x: 50, y: 100, z: 43.557034}
+  m_LocalScale: {x: 10, y: 10, z: 10}
+  m_Children:
+  - {fileID: 8791544561057871547}
+  - {fileID: 8132114826812251768}
+  - {fileID: 3079422438017745427}
+  m_Father: {fileID: 0}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: -90, z: 15}
+--- !u!33 &7399250258912274421
+MeshFilter:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6506401639259288298}
+  m_Mesh: {fileID: -5484019449596460742, guid: fd91ce56340022c4aa29e8e9c633331d, type: 3}
+--- !u!23 &4705027553700483903
+MeshRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6506401639259288298}
   m_Enabled: 1
   m_CastShadows: 1
   m_ReceiveShadows: 1
@@ -412,37 +412,37 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
---- !u!64 &5280534550935853078
+--- !u!64 &7127782898252021719
 MeshCollider:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5657453465937241850}
+  m_GameObject: {fileID: 6506401639259288298}
   m_Material: {fileID: 0}
   m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 4
   m_Convex: 0
   m_CookingOptions: 30
-  m_Mesh: {fileID: 133690397059232672, guid: 2e292e8b73b6b9f47bcac5e4e2c57eed, type: 3}
---- !u!114 &1198373814692924332
+  m_Mesh: {fileID: -5484019449596460742, guid: fd91ce56340022c4aa29e8e9c633331d, type: 3}
+--- !u!114 &7304273644269224776
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5657453465937241850}
+  m_GameObject: {fileID: 6506401639259288298}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: f5a05210cac0fab4ebdcf6b1ab5bf3d7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   rotVec: {x: 0, y: 0, z: 0}
-  movVec: {x: 0, y: 0, z: 30}
+  movVec: {x: 0, y: 0, z: 40}
   limitXPos: {x: -50, y: 50}
-  shakeForce: 0.02
---- !u!1 &6425809176532480576
+  shakeForce: 0.08
+--- !u!1 &8057030366304553776
 GameObject:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -450,45 +450,46 @@ GameObject:
   m_PrefabAsset: {fileID: 0}
   serializedVersion: 6
   m_Component:
-  - component: {fileID: 2023608085149232739}
-  - component: {fileID: 3686121071501863783}
-  - component: {fileID: 7554522891233708619}
+  - component: {fileID: 8791544561057871547}
+  - component: {fileID: 3278231859530956431}
+  - component: {fileID: 5358831819370201791}
   m_Layer: 0
-  m_Name: ComPlaneV3_RightLandingGear_Tires
+  m_Name: ComPlaneV2_FrontLandingGear
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!4 &2023608085149232739
+--- !u!4 &8791544561057871547
 Transform:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6425809176532480576}
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -0.00024724007, y: -0.11146535, z: -0.022653617}
+  m_GameObject: {fileID: 8057030366304553776}
+  m_LocalRotation: {x: 0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: -0.0010583997, y: 0.1396744, z: 1.1518651}
   m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children: []
-  m_Father: {fileID: 7167238006298237534}
+  m_Children:
+  - {fileID: 7911902535377416000}
+  m_Father: {fileID: 5836860267780237392}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!33 &3686121071501863783
+--- !u!33 &3278231859530956431
 MeshFilter:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6425809176532480576}
-  m_Mesh: {fileID: 5475450827125181237, guid: 2e292e8b73b6b9f47bcac5e4e2c57eed, type: 3}
---- !u!23 &7554522891233708619
+  m_GameObject: {fileID: 8057030366304553776}
+  m_Mesh: {fileID: -1831885213372617278, guid: fd91ce56340022c4aa29e8e9c633331d, type: 3}
+--- !u!23 &5358831819370201791
 MeshRenderer:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6425809176532480576}
+  m_GameObject: {fileID: 8057030366304553776}
   m_Enabled: 1
   m_CastShadows: 1
   m_ReceiveShadows: 1
@@ -501,7 +502,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: -876546973899608171, guid: 2e292e8b73b6b9f47bcac5e4e2c57eed, type: 3}
+  - {fileID: -876546973899608171, guid: fd91ce56340022c4aa29e8e9c633331d, type: 3}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -523,7 +524,7 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
---- !u!1 &8506743856940014129
+--- !u!1 &8986547975237869231
 GameObject:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -531,46 +532,45 @@ GameObject:
   m_PrefabAsset: {fileID: 0}
   serializedVersion: 6
   m_Component:
-  - component: {fileID: 5175812105096081233}
-  - component: {fileID: 196065391118049182}
-  - component: {fileID: 7879831782426155974}
+  - component: {fileID: 2087961694140163173}
+  - component: {fileID: 7519416661291981900}
+  - component: {fileID: 555195650435731155}
   m_Layer: 0
-  m_Name: ComPlaneV3_FrontLandingGear
+  m_Name: ComPlaneV2_LeftLandingGear_Tires
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!4 &5175812105096081233
+--- !u!4 &2087961694140163173
 Transform:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8506743856940014129}
-  m_LocalRotation: {x: 0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -0.0010583997, y: 0.1396744, z: 1.1518651}
+  m_GameObject: {fileID: 8986547975237869231}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0.00024724007, y: -0.11146535, z: -0.022653617}
   m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children:
-  - {fileID: 8633492092200810241}
-  m_Father: {fileID: 5028444216222399552}
+  m_Children: []
+  m_Father: {fileID: 8132114826812251768}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!33 &196065391118049182
+--- !u!33 &7519416661291981900
 MeshFilter:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8506743856940014129}
-  m_Mesh: {fileID: -4867429503526235804, guid: 2e292e8b73b6b9f47bcac5e4e2c57eed, type: 3}
---- !u!23 &7879831782426155974
+  m_GameObject: {fileID: 8986547975237869231}
+  m_Mesh: {fileID: 776226393786207434, guid: fd91ce56340022c4aa29e8e9c633331d, type: 3}
+--- !u!23 &555195650435731155
 MeshRenderer:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8506743856940014129}
+  m_GameObject: {fileID: 8986547975237869231}
   m_Enabled: 1
   m_CastShadows: 1
   m_ReceiveShadows: 1
@@ -583,7 +583,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: -876546973899608171, guid: 2e292e8b73b6b9f47bcac5e4e2c57eed, type: 3}
+  - {fileID: -876546973899608171, guid: fd91ce56340022c4aa29e8e9c633331d, type: 3}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0

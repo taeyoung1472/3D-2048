@@ -20,9 +20,11 @@ public class GameManager : MonoBehaviour
     public TextMesh ScoreText;
     public GameObject overPannel;
     public Text text;
+    bool isCubeSpawn;
     [SerializeField] private User user;
     [SerializeField] private ComboSystem comboSystem;
     public ComboSystem ComboSystem { get { return comboSystem; } }
+    public bool IsCubeSpawn { get { return isCubeSpawn; } set { isCubeSpawn = value; } }
     public User UserInfo{
         get{
             return user;

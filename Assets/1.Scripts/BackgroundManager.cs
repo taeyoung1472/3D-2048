@@ -9,6 +9,8 @@ public class BackgroundManager : MonoBehaviour
     [SerializeField] private BackGroundElements[] element;
     float tempY;
     [SerializeField] int backgroundTier;
+    [SerializeField] Color[] backgroundColors;
+    [SerializeField] Camera camera;
     void Start()
     {
         StartCoroutine(SpawnElements());
@@ -16,13 +18,14 @@ public class BackgroundManager : MonoBehaviour
     void Update()
     {
         tempY = Mathf.Lerp(tempY, yPos[backgroundTier], Time.deltaTime);
+        camera.backgroundColor = Color.Lerp(camera.backgroundColor, backgroundColors[backgroundTier], Time.deltaTime);
         transform.position = new Vector3(20, tempY, 0);
     }
     IEnumerator SpawnElements()
     {
         while (true)
         {
-            yield return new WaitForSeconds(5f);
+            yield return new WaitForSeconds(2f * UnityEngine.Random.Range(1f,2f));
             Instantiate(element[backgroundTier].elements[UnityEngine.Random.Range(0, element[backgroundTier].elements.Length)], transform);
         }
     }
