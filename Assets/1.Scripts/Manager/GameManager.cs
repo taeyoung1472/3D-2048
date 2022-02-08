@@ -21,10 +21,10 @@ public class GameManager : MonoBehaviour
     public GameObject overPannel;
     public Text text;
     [SerializeField] private User user;
-    public User UserInfo
-    {
-        get
-        {
+    [SerializeField] private ComboSystem comboSystem;
+    public ComboSystem ComboSystem { get { return comboSystem; } }
+    public User UserInfo{
+        get{
             return user;
         }
     }
@@ -55,15 +55,14 @@ public class GameManager : MonoBehaviour
     public void GoMain()
     {
         SceneManager.LoadScene(0);
-    }
+    } 
     public IEnumerator ExitGame()
     {
         if (isExit)
         {
             Application.Quit();
         }
-        else
-        {
+        else{
             isExit = true;
         }
         yield return new WaitForSeconds(0.5f);
