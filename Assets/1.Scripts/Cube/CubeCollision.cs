@@ -35,6 +35,7 @@ public class CubeCollision : MonoBehaviour
                         CubeSpawner.instance.PlusCubeMaxNumber();
                     }
                     GameManager.Instance.shakeManager.ShakeCamera(0.1f);
+                    GameManager.Instance.ComboSystem.ComboUpdate();
                     GameObject obj = Instantiate(textEffect, contactPoint, Quaternion.identity);
                     TextMesh tm = obj.GetComponent<TextMesh>();
                     tm.text = "+ " + (cube.cubeNumber * 2).ToString();

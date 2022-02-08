@@ -21,6 +21,8 @@ public class GameManager : MonoBehaviour
     public GameObject overPannel;
     public Text text;
     [SerializeField] private User user;
+    [SerializeField] private ComboSystem comboSystem;
+    public ComboSystem ComboSystem { get { return comboSystem; } }
     public User UserInfo{
         get{
             return user;

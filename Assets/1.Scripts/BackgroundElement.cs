@@ -12,7 +12,7 @@ public class BackgroundElement : MonoBehaviour
     {
         if (Random.Range(0, 2) == 0)
         {
-            movVec.x *= -1;
+            movVec *= -1;
         }
     }
     public void Update()
