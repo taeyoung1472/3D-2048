@@ -8,9 +8,15 @@ public class ComboSystem : MonoBehaviour
     public void ComboUpdate()
     {
         combo++;
+        print($"Combo : {combo}!");
     }
     public void ComboReset()
     {
         combo = 0;
+        print($"Combo : End!");
+    }
+    public int ComboGet()
+    {
+        return combo;
     }
 }

@@ -11,7 +11,7 @@ public class BackgroundManager : MonoBehaviour
     [SerializeField] int backgroundTier;
     void Start()
     {
-        //StartCoroutine(SpawnElements());
+        StartCoroutine(SpawnElements());
     }
     void Update()
     {
@@ -23,7 +23,7 @@ public class BackgroundManager : MonoBehaviour
         while (true)
         {
             yield return new WaitForSeconds(5f);
-            Instantiate(element[backgroundTier].elements[UnityEngine.Random.Range(0, element[backgroundTier].elements.Length)]);
+            Instantiate(element[backgroundTier].elements[UnityEngine.Random.Range(0, element[backgroundTier].elements.Length)], transform);
         }
     }
 }

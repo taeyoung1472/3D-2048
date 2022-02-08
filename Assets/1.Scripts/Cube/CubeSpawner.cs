@@ -42,7 +42,6 @@ public class CubeSpawner : MonoBehaviour
     }
     public Cube Spawn(int number, Vector3 position)
     {
-        GameManager.Instance.ComboSystem.ComboReset();
         if (cubesQueue.Count == 0)
         {
             AddCubeToQueue();

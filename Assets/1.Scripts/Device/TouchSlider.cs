@@ -34,6 +34,7 @@ public class TouchSlider : MonoBehaviour , IPointerDownHandler , IPointerUpHandl
             OnPointerUpEvent.Invoke();
         }
         uiSlider.value = 0;
+        GameManager.Instance.ComboSystem.ComboReset();
     }
     private void OnSliderValueChange(float value)
     {
