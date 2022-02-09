@@ -12,6 +12,6 @@ public class JumpZone : MonoBehaviour
         IJumpable jumpable = other.gameObject.GetComponent<IJumpable>();
 
         if(jumpable == null)return;
-        jumpable.Jump(this,force);
+        jumpable.Jump(this,force, transform.up);
     }
 }

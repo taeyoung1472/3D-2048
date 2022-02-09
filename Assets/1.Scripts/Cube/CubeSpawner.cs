@@ -83,6 +83,7 @@ public class CubeSpawner : MonoBehaviour
     }
     public void DestroyCube(Cube cube)
     {
+        cube.GetComponent<CubeCollision>().DestroyCubeCollision();
         cube.cubeRigidbody.velocity = Vector3.zero;
         cube.cubeRigidbody.angularVelocity = Vector3.zero;
         cube.transform.rotation = Quaternion.identity;
