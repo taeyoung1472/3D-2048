@@ -9,7 +9,7 @@ public class GoogleSheetManager : MonoBehaviour
     public void Call(string mode, int score, string name = null)
     {
         WWWForm form = new WWWForm();
-        if(name != null)
+        if (name != null)
         {
             print(mode + score + name + GameManager.Instance.UserInfo.name);
             form.AddField("Name", name);

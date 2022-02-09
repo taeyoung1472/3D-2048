@@ -16,7 +16,6 @@ public class Cube : MonoBehaviour
     [HideInInspector] public Color cubeColor;
     [HideInInspector] public Rigidbody cubeRigidbody;
     [HideInInspector] public bool isMainCube;
-
     private MeshRenderer cubeMeshRenderer;
     private void Awake()
     {

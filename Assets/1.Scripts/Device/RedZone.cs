@@ -16,6 +16,7 @@ public class RedZone : MonoBehaviour
                 if(GameManager.Instance.isOver == false && !isTrigger)
                 {
                     isTrigger = true;
+                    GameManager.Instance.GameOverPanel.SetActive(true);
                     GameManager.Instance.googleSheetManager.Call("Get",GameManager.Instance.score);
                 }
             }

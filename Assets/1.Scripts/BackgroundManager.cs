@@ -7,10 +7,18 @@ public class BackgroundManager : MonoBehaviour
 {
     [SerializeField] private float[] yPos;
     [SerializeField] private BackGroundElements[] element;
+    [SerializeField] private int[] scoreTier;
     float tempY;
     [SerializeField] int backgroundTier;
     [SerializeField] Color[] backgroundColors;
     [SerializeField] Camera camera;
+    public void CheckTier(int _score)
+    {
+        if(scoreTier[backgroundTier] < _score)
+        {
+            backgroundTier++;
+        }
+    }
     void Start()
     {
         StartCoroutine(SpawnElements());

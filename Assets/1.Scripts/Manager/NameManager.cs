@@ -53,7 +53,10 @@ public class NameManager : MonoBehaviour
             isShaking = true;
             StartCoroutine(ShakeText());
         }
-        GameManager.Instance.googleSheetManager.Call("Change", 1472,nickName);
+        GameManager.Instance.UserInfo.name = nickName;
+        GameManager.Instance.EndInpuut();
+        GameManager.Instance.SaveUser();
+        print(nickName);
     }
     #endregion
 
