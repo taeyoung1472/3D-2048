@@ -4,5 +4,5 @@ using UnityEngine;
 
 public interface IJumpable
 {
-    void Jump(JumpZone jumpZone, float force);
+    void Jump(JumpZone jumpZone, float force, Vector3 direction);
 }

@@ -9,7 +9,7 @@ public class CubeSpawner : MonoBehaviour
     Queue<Cube> cubesQueue = new Queue<Cube>();
     [SerializeField] private int cubesQueueCapacity = 20;
 
-    [HideInInspector] public int maxCubeNumber;//4096
+    public int maxCubeNumber{ get; private set; }//4096
     [SerializeField] private GameObject cubePrefabs;
     [SerializeField] private Color[] cubeColors;
     [SerializeField] private TextMesh nextNumberText;
@@ -17,7 +17,7 @@ public class CubeSpawner : MonoBehaviour
     private int maxPower = 12;
     private Vector3 defaultSpawnPos;
 
-    public int cubeMaxNumber = 2;
+    public int cubeMaxNumber { get; private set; } = 2;
 
     private void Awake()
     {
@@ -26,14 +26,14 @@ public class CubeSpawner : MonoBehaviour
         defaultSpawnPos = transform.position;
         InitializeCubeQueue();
     }
-    void InitializeCubeQueue()
+    private void InitializeCubeQueue()
     {
         for (int i = 0; i < cubesQueueCapacity; i++)
         {
             AddCubeToQueue();
         }
     }
-    void AddCubeToQueue()
+    private void AddCubeToQueue()
     {
         Cube cube = Instantiate(cubePrefabs, defaultSpawnPos, Quaternion.identity, transform).GetComponent<Cube>();
         cube.gameObject.SetActive(false);
@@ -65,7 +65,7 @@ public class CubeSpawner : MonoBehaviour
         GameManager.Instance.IsCubeSpawn = true;
         return Spawn(0, defaultSpawnPos);
     }
-    public void GenerateRandomNumber()
+    private void GenerateRandomNumber()
     {
         cubeNumberTemp[1] = (int)Mathf.Pow(2, Random.Range(1, cubeMaxNumber));
     }
@@ -83,6 +83,7 @@ public class CubeSpawner : MonoBehaviour
     }
     public void DestroyCube(Cube cube)
     {
+        cube.GetComponent<CubeCollision>().DestroyCubeCollision();
         cube.cubeRigidbody.velocity = Vector3.zero;
         cube.cubeRigidbody.angularVelocity = Vector3.zero;
         cube.transform.rotation = Quaternion.identity;

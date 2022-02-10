@@ -13,7 +13,6 @@ public class CubeCollision : MonoBehaviour, IJumpable
     Cube cube;
 
     private Rigidbody rb;
-
     private JumpZone jumpZone;
 
     private void Awake()
@@ -80,10 +79,15 @@ public class CubeCollision : MonoBehaviour, IJumpable
         }
     }
 
-    public void Jump(JumpZone jumpZone, float forceY)
+    public void Jump(JumpZone jumpZone, float force, Vector3 direction)
     {
         if(this.jumpZone == jumpZone)return;
         this.jumpZone = jumpZone;
-        rb.velocity = new Vector3(rb.velocity.x * 0.5f, forceY, rb.velocity.z * 0.5f);
+        rb.velocity = new Vector3(rb.velocity.x, rb.velocity.y, rb.velocity.z * 0.3f);
+        rb.AddForce(direction * force, ForceMode.Impulse);
+    }
+
+    public void DestroyCubeCollision(){
+        jumpZone = null;
     }
 }
