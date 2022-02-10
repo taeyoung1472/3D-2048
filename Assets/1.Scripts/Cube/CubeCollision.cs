@@ -24,7 +24,7 @@ public class CubeCollision : MonoBehaviour, IJumpable
     private void OnCollisionEnter(Collision collision)
     {
         Cube otherCube = collision.gameObject.GetComponent<Cube>();
-        if (otherCube != null && cube.cubeID > otherCube.cubeID)
+        if (otherCube != null && cube.cubeID > otherCube.cubeID && otherCube.isMainCube == cube.isMainCube)
         {
             if (cube.cubeNumber == otherCube.cubeNumber)
             {

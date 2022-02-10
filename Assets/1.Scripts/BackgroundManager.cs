@@ -14,9 +14,12 @@ public class BackgroundManager : MonoBehaviour
     [SerializeField] Camera camera;
     public void CheckTier(int _score)
     {
-        if(scoreTier[backgroundTier] < _score)
+        if (backgroundTier < scoreTier.Length)
         {
-            backgroundTier++;
+            if (scoreTier[backgroundTier] < _score)
+            {
+                backgroundTier++;
+            }
         }
     }
     void Start()

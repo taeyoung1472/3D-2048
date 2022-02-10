@@ -32,12 +32,11 @@ public class Player : MonoBehaviour
     {
         mainCube = CubeSpawner.instance.SpawnRandom();
         mainCube.isMainCube = true;
-
         cubePos = mainCube.transform.position;
     }
     private void SpawnNewCube()
     {
-        mainCube.isMainCube = false;
+        //mainCube.isMainCube = false;
         isCube = true;
         SpawnCube();
     }
@@ -50,6 +49,7 @@ public class Player : MonoBehaviour
             mainCube.cubeRigidbody.AddForce(Vector3.forward * 20f, ForceMode.Impulse);
             GameManager.Instance.AddScroe(mainCube.cubeNumber);
             isCube = false;
+            mainCube.isMainCube = false;
             Invoke("SpawnNewCube", 0.3f);
         }
     }
