@@ -2,5 +2,7 @@ using System.Collections.Generic;
 
 [System.Serializable]
 public class ModVO{
-    public List<string> modString;
+    public bool isIce;
+    public bool isJumpzone;
+    public bool isMeteor;
 }
