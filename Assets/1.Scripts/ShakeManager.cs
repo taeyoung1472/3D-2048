@@ -4,19 +4,19 @@ using UnityEngine;
 
 public class ShakeManager : MonoBehaviour
 {
-    int isZingle;
+    bool isZingle;
     Vector3 originalPos;
     private float ShakeForce;
     [SerializeField] private float strong;
     public void Start()
     {
-        isZingle = PlayerPrefs.GetInt("Zingle");
+        isZingle = GameManager.Instance.UserInfo.isZingle;
         originalPos = transform.position;
     }
     public void ShakeCamera(float force)
     {
         ShakeForce += force * strong;
-        if (isZingle == 1)
+        if (isZingle)
         {
 #if UNITY_ANDROID
             Handheld.Vibrate();

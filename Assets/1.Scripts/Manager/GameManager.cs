@@ -117,6 +117,10 @@ public class GameManager : MonoBehaviour
     {
         SaveUser();
     }
+    public void SetZingle(bool isZingle)
+    {
+        user.isZingle = isZingle;
+    }
     public void Quit()
     {
         Application.Quit();

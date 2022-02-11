@@ -4,6 +4,7 @@ using UnityEngine.UI;
 public class User
 {
     public string name;
+    public bool isZingle;
     public int money;
     public int bestScore;
     public List<int> gotCubeSkin = new List<int>();
