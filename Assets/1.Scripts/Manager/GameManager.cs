@@ -64,6 +64,7 @@ public class GameManager : MonoBehaviour
     public void GoGame()
     {
         SaveUser();
+        ModManager.Instance.SaveToJson();
         SceneManager.LoadScene(1);
     }
     public void GoMain()
@@ -120,18 +121,18 @@ public class GameManager : MonoBehaviour
     {
         Application.Quit();
     }
-    [ContextMenu("ÀúÀåÇÏ±â")]
+    [ContextMenu("ï¿½ï¿½ï¿½ï¿½ï¿½Ï±ï¿½")]
     public void SaveUser()
     {
-        print("ÀúÀå");
+        print("ï¿½ï¿½ï¿½ï¿½");
         string jsonData = JsonUtility.ToJson(user, true);
         string path = Path.Combine(Application.persistentDataPath, "playerData.json");
         File.WriteAllText(path, jsonData);
     }
-    [ContextMenu("ºÒ·¯¿À±â")]
+    [ContextMenu("ï¿½Ò·ï¿½ï¿½ï¿½ï¿½ï¿½")]
     public void LoadUser()
     {
-        print("ºÒ·¯¿À±â");
+        print("ï¿½Ò·ï¿½ï¿½ï¿½ï¿½ï¿½");
         string path = Path.Combine(Application.persistentDataPath, "playerData.json");
         string jsonData = File.ReadAllText(path);
         user = JsonUtility.FromJson<User>(jsonData);
