@@ -10,21 +10,24 @@ public class Select : MonoBehaviour
     bool isCheck;
 
 
-    public void Check(string modName)
+    public void Check(int count)
     {
         if (isCheck)
         {
             checkImage.color = new Vector4(0, 0, 0, 0);
             checkImage.sprite = null;
             isCheck = false;
-            ModManager.Instance.modString.Add(modName);
+            ModManager.mods -= count;
+            //ModManager.Instance.modString.Remove(modName);
         }
         else
         {
             checkImage.color = new Vector4(0, 1, 0, 1);
             checkImage.sprite = checkSprite;
             isCheck = true;
-            ModManager.Instance.modString.Remove(modName);
+            ModManager.mods += count;
+
+            //ModManager.Instance.modString.Add(modName);
         }
     }
 

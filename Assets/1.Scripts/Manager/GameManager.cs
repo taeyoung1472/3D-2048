@@ -64,7 +64,8 @@ public class GameManager : MonoBehaviour
     public void GoGame()
     {
         SaveUser();
-        ModManager.Instance.SaveToJson();
+        //ModManager.Instance.SaveToJson();
+        ModManager.Instance.SetMode();
         SceneManager.LoadScene(1);
     }
     public void GoMain()

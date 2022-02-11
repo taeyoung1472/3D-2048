@@ -19,28 +19,64 @@ public class ModSpawner : MonoBehaviour
     private GameObject meteor;
 
 
+    // private void Awake()
+    // {
+    //     SAVE_PATH = Application.persistentDataPath + "/Save";
+    //     string json = File.ReadAllText($"{SAVE_PATH} {SAVE_FILENAME}");
+    //     ModVO vo = JsonUtility.FromJson<ModVO>(json);
+    //     Debug.Log(vo);
+    //     Debug.Log(json);
+
+
+
+    //     if (vo.isIce)
+    //     {
+    //         ground.SetActive(false);
+    //         iceGround.SetActive(true);
+    //     }
+    //     if (vo.isJumpzone)
+    //     {
+    //         Instantiate(jumpZone);
+    //     }
+    //     if (vo.isMeteor)
+    //     {
+    //         Instantiate(meteor);
+    //     }
+    // }
+
     private void Awake()
     {
-        SAVE_PATH = Application.dataPath + "/Save";
-        string json = File.ReadAllText(SAVE_PATH + SAVE_FILENAME);
-        ModVO vo = JsonUtility.FromJson<ModVO>(json);
-
-        for (int i = 0; i < vo.modString.Count; i++)
+        int mod = PlayerPrefs.GetInt("MOD", 0);
+        Debug.Log(mod);
+        switch (mod)
         {
-            switch (vo.modString[i])
-            {
-                case "Ice":
-                    ground.SetActive(false);
-                    iceGround.SetActive(true);
-                    break;
-                case "JumpZone":
-                    Instantiate(jumpZone);
-                    break;
-                case "Meteor":
-                    Instantiate(meteor);
-                    break;
-                default: break;
-            }
+            case 1:
+                ground.SetActive(false);
+                iceGround.SetActive(true);
+                break;
+            case 2:
+                Instantiate(jumpZone);
+                break;
+            case 3:
+                Instantiate(meteor);
+                break;
+            case 4:
+                ground.SetActive(false);
+                iceGround.SetActive(true);
+                Instantiate(meteor);
+                break;
+            case 5:
+                Instantiate(jumpZone);
+                Instantiate(meteor);
+                break;
+            case 6:
+                ground.SetActive(false);
+                iceGround.SetActive(true);
+                Instantiate(meteor);
+                Instantiate(jumpZone);
+                break;
+            default:
+                break;
         }
     }
 }
