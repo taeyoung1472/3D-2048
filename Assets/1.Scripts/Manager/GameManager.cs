@@ -30,8 +30,10 @@ public class GameManager : MonoBehaviour
     public GameObject GameOverPanel { get { return gameOverPanel; } }
     public ComboSystem ComboSystem { get { return comboSystem; } }
     public bool IsCubeSpawn { get { return isCubeSpawn; } set { isCubeSpawn = value; } }
-    public User UserInfo{
-        get{
+    public User UserInfo
+    {
+        get
+        {
             return user;
         }
     }
@@ -49,7 +51,7 @@ public class GameManager : MonoBehaviour
             tempBest = bestScore;
             BestScoreText.text = string.Format("BestScore : " + "{0}", bestScore);
         }
-        if(user.name == "" || user.name == null)
+        if (user.name == "" || user.name == null)
         {
             Inputname();
         }
@@ -71,6 +73,12 @@ public class GameManager : MonoBehaviour
     public void GoMain()
     {
         SaveUser();
+        try
+        {
+
+            ModManager.Instance.SetMode();
+        }
+        catch { }
         SceneManager.LoadScene(0);
     }
     public void GameOver()
