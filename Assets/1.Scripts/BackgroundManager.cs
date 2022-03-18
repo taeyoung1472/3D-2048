@@ -2,6 +2,7 @@ using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using static Define;
 
 public class BackgroundManager : MonoBehaviour
 {
@@ -11,7 +12,6 @@ public class BackgroundManager : MonoBehaviour
     float tempY;
     [SerializeField] int backgroundTier;
     [SerializeField] Color[] backgroundColors;
-    [SerializeField] Camera camera;
     public void CheckTier(int _score)
     {
         if (backgroundTier < scoreTier.Length)
@@ -29,7 +29,7 @@ public class BackgroundManager : MonoBehaviour
     void Update()
     {
         tempY = Mathf.Lerp(tempY, yPos[backgroundTier], Time.deltaTime);
-        camera.backgroundColor = Color.Lerp(camera.backgroundColor, backgroundColors[backgroundTier], Time.deltaTime);
+        MainCam.backgroundColor = Color.Lerp(MainCam.backgroundColor, backgroundColors[backgroundTier], Time.deltaTime);
         transform.position = new Vector3(20, tempY, 0);
     }
     IEnumerator SpawnElements()

@@ -6,7 +6,7 @@ using TMPro;
 [RequireComponent(typeof(Rigidbody2D))]
 public class Cube : MonoBehaviour
 {
-    public AudioSource audio;
+    public AudioSource cubeAudio;
     public AudioSource audio2;
     static int staticID = 0;
     [HideInInspector] public int cubeID;

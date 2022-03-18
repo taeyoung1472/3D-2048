@@ -37,8 +37,8 @@ public class CubeCollision : MonoBehaviour, IJumpable
                     float randomValue = Random.Range(-20f, 20f);
                     Vector3 randomDir = Vector3.one * randomValue;
                     newCube.cubeRigidbody.AddTorque(randomDir);
-                    newCube.audio.pitch = 1 + GameManager.Instance.ComboSystem.ComboGet() * 0.1f;
-                    newCube.audio.Play();
+                    newCube.cubeAudio.pitch = 1 + GameManager.Instance.ComboSystem.ComboGet() * 0.1f;
+                    newCube.cubeAudio.Play();
                     if ((Mathf.Log(cube.cubeNumber) / Mathf.Log(2)) >= CubeSpawner.instance.cubeMaxNumber + 1)
                     {
                         CubeSpawner.instance.PlusCubeMaxNumber();

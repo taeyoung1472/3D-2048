@@ -28,7 +28,7 @@ public class AdManager : MonoBehaviour
 
 
 
-    #region ¹è³Ê ±¤°í
+    #region ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½
     const string bannerTestID = "ca-app-pub-3940256099942544/6300978111";
     const string bannerID = "ca-app-pub-4606139877263747/3894230553";
     BannerView bannerAd;
@@ -51,7 +51,7 @@ public class AdManager : MonoBehaviour
 
 
 
-    #region Àü¸é ±¤°í
+    #region ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½
     const string frontTestID = "ca-app-pub-3940256099942544/8691691433";
     const string frontID = "ca-app-pub-4606139877263747/3702658861";
     InterstitialAd frontAd;
@@ -63,7 +63,7 @@ public class AdManager : MonoBehaviour
         frontAd.LoadAd(GetAdRequest());
         frontAd.OnAdClosed += (sender, e) =>
         {
-            print("Àü¸é±¤°í ¼º°ø");
+            print("ï¿½ï¿½ï¿½é±¤ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½");
         };
     }
 

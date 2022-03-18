@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using System.Reflection;
 
 public class RandomCubeSpawner : MonoBehaviour
 {
@@ -18,6 +19,7 @@ public class RandomCubeSpawner : MonoBehaviour
 
     private IEnumerator SpawnRandomCube(){
         while(true){
+            Debug.Log("왜 두개지" + gameObject.name);
             Cube cube = CubeSpawner.instance.SpawnRandom();
             int random = (int)Mathf.Pow(2, Random.Range(1, CubeSpawner.instance.cubeMaxNumber));
             cube.SetNumber(random);

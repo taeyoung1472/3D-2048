@@ -8,7 +8,7 @@ public class Player : MonoBehaviour
     [SerializeField] private Cube mainCube;
     [SerializeField] float cubeMaxPosX;
     [SerializeField] private float moveSpeed;
-    public AudioSource audio;
+    public AudioSource playerAudio;
 
     private Vector3 cubePos;
     bool isPointerDown;
@@ -45,7 +45,7 @@ public class Player : MonoBehaviour
         if (isPointerDown && isCube)
         {
             isPointerDown = false;
-            audio.Play();
+            playerAudio.Play();
             mainCube.cubeRigidbody.AddForce(Vector3.forward * 20f, ForceMode.Impulse);
             GameManager.Instance.AddScroe(mainCube.cubeNumber);
             isCube = false;
