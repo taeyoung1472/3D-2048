@@ -20,11 +20,6 @@ public class AdManager : MonoBehaviour
         LoadFrontAd();
     }
 
-    void Update()
-    {
-        //frontAd.IsLoaded();
-        //rewardAd.IsLoaded();
-    }
 
     AdRequest GetAdRequest()
     {
@@ -38,7 +33,7 @@ public class AdManager : MonoBehaviour
     const string bannerID = "ca-app-pub-4606139877263747/3894230553";
     BannerView bannerAd;
 
-
+    
     void LoadBannerAd()
     {
         bannerAd = new BannerView(isTestMode ? bannerTestID : bannerID,
