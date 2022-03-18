@@ -14,7 +14,7 @@ public class TextEffect : MonoBehaviour
     private IEnumerator FadeOut()
     {
         float alpha = 1;
-        while(tm.color.a >= 0)
+        while(tm.color.a > 0)
         {
             yield return new WaitForSeconds(0.1f);
             alpha -= 0.1f;

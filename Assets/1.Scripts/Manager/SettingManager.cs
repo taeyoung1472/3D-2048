@@ -5,25 +5,22 @@ using UnityEngine.UI;
 
 public class SettingManager : MonoBehaviour
 {
-    int isZingle;
     [SerializeField] private Slider masterSoundSlider;
     [SerializeField] private Slider BackGroundSoundSlider;
     [SerializeField] private Slider effectSoundSlider;
-    [SerializeField] private Button zingleBurron;
+    [SerializeField] private Button zingleButtonTrue, zingleButtonFalse;
     [SerializeField] private GameObject settingPannel;
-    public void Awake()
-    {
-        isZingle = PlayerPrefs.GetInt("Zingle",0);
-    }
     private void Start()
     {
-        if (isZingle == 0)
+        if (GameManager.Instance.UserInfo.isZingle)
         {
-            zingleBurron.image.color = Color.gray;
+            zingleButtonTrue.image.color = Color.white;
+            zingleButtonFalse.image.color = Color.gray;
         }
         else
         {
-            zingleBurron.image.color = Color.white;
+            zingleButtonTrue.image.color = Color.gray;
+            zingleButtonFalse.image.color = Color.white;
         }
     }
     public void ShowSettingPanel(bool _bool)
@@ -32,15 +29,15 @@ public class SettingManager : MonoBehaviour
     }
     public void ZingleSet()
     {
-        if (isZingle == 1)
+        if (GameManager.Instance.UserInfo.isZingle)
         {
-            zingleBurron.image.color = Color.gray;
-            isZingle = 0;
+            zingleButtonTrue.image.color = Color.white;
+            zingleButtonFalse.image.color = Color.gray;
         }
         else
         {
-            zingleBurron.image.color = Color.white;
-            isZingle = 1;
+            zingleButtonTrue.image.color = Color.gray;
+            zingleButtonFalse.image.color = Color.white;
         }
     }
 }

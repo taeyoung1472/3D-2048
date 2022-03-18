@@ -18,6 +18,7 @@ public class ShakeManager : MonoBehaviour
         ShakeForce += force * strong;
         if (isZingle)
         {
+            print("Áøµ¿");
 #if UNITY_ANDROID
             Handheld.Vibrate();
 #endif

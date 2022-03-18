@@ -5,8 +5,8 @@ using UnityEngine.Audio;
 
 public class SoundManager : MonoBehaviour
 {
-    [SerializeField]
-    private AudioMixer audioMixer = null;
+    [SerializeField] private AudioSource open, close, change;
+    [SerializeField] private AudioMixer audioMixer = null;
     public AudioSource click;
     public void Click()
     {
@@ -37,5 +37,17 @@ public class SoundManager : MonoBehaviour
         else{
             audioMixer.SetFloat("SFX", volume);
         }
+    }
+    public void OpenSound()
+    {
+        open.Play();
+    }
+    public void CloseSound()
+    {
+        close.Play();
+    }
+    public void ChangeSound()
+    {
+        change.Play();
     }
 }

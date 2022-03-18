@@ -1,27 +1,22 @@
 using System.Collections;
 using System.Collections.Generic;
+using UnityEngine.UI;
 using UnityEngine;
-
-public enum CubeSkinState
+public class ShopManager
 {
-    NONE = 0,
-    TAEYOUNG = 1,
-    TAEYOUNG2 = 2,
-    TAEYOUNG3 = 3,
-    TAEYOUNG4 = 4,
-    TAEYOUNG5 = 5,
-
-    LENGTH,
-}
-public enum StageSkinState
-{
-    NONE = 0,
-    TAEYOUNG = 1,
-    LENGTH,
-}
-public class ShopManager : MonoSingleton<ShopManager>
-{
-    public CubeSkinState CubeSkin
+    [SerializeField] private Image[] images;
+    public void Buy()
+    {
+        //StartCorutin(RandomSystem());
+    }
+    IEnumerator RandomSystem()
+    {
+        for (int i = 0; i < 20; i++)
+        {
+            yield return new WaitForSeconds(i);
+        }
+    }
+    /*public CubeSkinState CubeSkin
     {
         get
         {
@@ -43,5 +38,5 @@ public class ShopManager : MonoSingleton<ShopManager>
         //TODO : 시작할때 for문으로 LIST와 맞는 숫자를 가진애들의 ispurchase를 켜준다.
         //TODO : isPurchase를 켜줬으니 Refresh해준다
     }
-    #endregion
+    #endregion*/
 }

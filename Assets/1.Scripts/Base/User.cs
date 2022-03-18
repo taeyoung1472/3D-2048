@@ -7,9 +7,16 @@ public class User
     public bool isZingle;
     public int money;
     public int bestScore;
-    public List<int> gotCubeSkin = new List<int>();
-    public List<int> gotStageSkin = new List<int>();
-
-    public CubeSkinState skinState = CubeSkinState.NONE;
-    public StageSkinState stageState = StageSkinState.NONE;
+    public StageSkin stageSkin;
+    //public List<int> gotCubeSkin = new List<int>();
+    //public List<int> gotStageSkin = new List<int>();
+}
+public enum StageSkin
+{
+    Custom1,
+    Custom2,
+    Custom3,
+    Custom4,
+    Custom5,
+    Custom6
 }

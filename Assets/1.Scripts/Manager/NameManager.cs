@@ -10,8 +10,8 @@ public class NameManager : MonoBehaviour
     [Header("Name")]
     [SerializeField]
     private InputField nameInput;
-    [SerializeField]
-    private InputField changeNameInput;
+    //[SerializeField]
+    //private InputField changeNameInput;
 
     [SerializeField]
     private int nameLimit;
@@ -28,10 +28,11 @@ public class NameManager : MonoBehaviour
     #region 이벤트
     private void Start()
     {
-        if(GameManager.Instance.UserInfo.name == null)
+        if (GameManager.Instance.UserInfo.name == null)
         {
             nameInputHold.SetActive(true);
         }
+        GameManager.Instance.AdManager.ToggleBannerAd(true);
         namePlaceholder = nameInput.placeholder.GetComponent<Text>();
         nameInput.characterLimit = nameLimit;
         changeCoroutine = ChangePlaceholder();
@@ -72,14 +73,14 @@ public class NameManager : MonoBehaviour
 
         nameInput.text = "";
         namePlaceholder.color = Color.red;
-        namePlaceholder.text = "닉네임을 잘못입력하셨습니다";
+        namePlaceholder.text = "Wrong!";
 
         namePlaceholder.transform.DOShakePosition(dotweenDuration, 15f, 20, 45f);
 
         yield return new WaitForSeconds(dotweenDuration);
 
         namePlaceholder.color = Color.gray;
-        namePlaceholder.text = "닉네임을 입력해주세요";
+        namePlaceholder.text = "Input NickName";
 
         StartCoroutine(changeCoroutine);
         isShaking = false;
@@ -94,7 +95,7 @@ public class NameManager : MonoBehaviour
             for (int i = 1; i <= 3; i++)
             {
                 yield return new WaitWhile(() => nameInput.isFocused);
-                namePlaceholder.text = "닉네임을 입력해주세요" + commas;
+                namePlaceholder.text = "Input NickName" + commas;
                 commas += comma;
                 yield return new WaitForSeconds(0.6f);
             }

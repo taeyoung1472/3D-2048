@@ -20,13 +20,15 @@ public class GameManager : MonoBehaviour
     public TextMesh BestScoreText;
     public TextMesh ScoreText;
     public GameObject overPannel;
-    public Text text;
+    public Text text, bestScoreText;
     bool isCubeSpawn;
-    [SerializeField] private GameObject gameOverPanel;
+    [SerializeField] private GameObject gameOverPanel, pausePanel;
     [SerializeField] private GameObject inputPanel;
     [SerializeField] private User user;
     [SerializeField] private ComboSystem comboSystem;
     [SerializeField] private BackgroundManager backgroundManager;
+    [SerializeField] private AdManager adManager;
+    public AdManager AdManager { get { return adManager; } }
     public GameObject GameOverPanel { get { return gameOverPanel; } }
     public ComboSystem ComboSystem { get { return comboSystem; } }
     public bool IsCubeSpawn { get { return isCubeSpawn; } set { isCubeSpawn = value; } }
@@ -51,15 +53,22 @@ public class GameManager : MonoBehaviour
             tempBest = bestScore;
             BestScoreText.text = string.Format("BestScore : " + "{0}", bestScore);
         }
-        if (user.name == "" || user.name == null)
+        /*if (user.name == "" || user.name == null)
         {
             Inputname();
-        }
+        }*/
+        adManager.ToggleBannerAd(true);
     }
+    //public void 
     private void Update()
     {
         if (Input.GetKeyDown(KeyCode.Escape))
         {
+            if (pausePanel)
+            {
+                pausePanel.SetActive(true);
+                return;
+            }
             Quit();
         }
     }
@@ -67,18 +76,19 @@ public class GameManager : MonoBehaviour
     {
         SaveUser();
         //ModManager.Instance.SaveToJson();
-        ModManager.Instance.SetMode();
+        //ModManager.Instance.SetMode();
+        adManager.ToggleBannerAd(true);
         SceneManager.LoadScene(1);
     }
     public void GoMain()
     {
         SaveUser();
-        try
+        /*try
         {
-
             ModManager.Instance.SetMode();
         }
-        catch { }
+        catch { }*/
+        adManager.ToggleBannerAd(true);
         SceneManager.LoadScene(0);
     }
     public void GameOver()
@@ -88,6 +98,7 @@ public class GameManager : MonoBehaviour
             googleSheetManager.Call("Get", score);
             text.gameObject.SetActive(true);
             text.text = string.Format("TOP : {0}%", overString);
+            bestScoreText.text = score.ToString();
             gameOverPanel.SetActive(false);
             overPannel.SetActive(true);
             if (tempBest < bestScore)
@@ -129,23 +140,39 @@ public class GameManager : MonoBehaviour
     public void SetZingle(bool isZingle)
     {
         user.isZingle = isZingle;
+        SaveUser();
     }
     public void Quit()
     {
         Application.Quit();
     }
-    [ContextMenu("�����ϱ�")]
+    public void FrontAd()
+    {
+        int rand = Random.Range(0, 100);
+        if(rand <= 25)
+        {
+            try
+            {
+                adManager.ShowFrontAd();
+            }
+            catch
+            {
+                print("Network Error");
+            }
+        }
+    }
+    [ContextMenu("저장하기")]
     public void SaveUser()
     {
-        print("����");
+        print("저장");
         string jsonData = JsonUtility.ToJson(user, true);
         string path = Path.Combine(Application.persistentDataPath, "playerData.json");
         File.WriteAllText(path, jsonData);
     }
-    [ContextMenu("�ҷ�����")]
+    [ContextMenu("불러오기")]
     public void LoadUser()
     {
-        print("�ҷ�����");
+        print("불러오기");
         string path = Path.Combine(Application.persistentDataPath, "playerData.json");
         string jsonData = File.ReadAllText(path);
         user = JsonUtility.FromJson<User>(jsonData);
